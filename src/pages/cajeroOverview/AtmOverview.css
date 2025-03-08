@@ -1,39 +1,215 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: sans-serif;
+    background-color: #868686; /*! Esto hay que cambiarlo */
 }
+
 
 .page-atmoverview {
     height: 100vh;
-    /* width: 250px; */
-    width: 40%;
-    background-color: #E5E5E5;
+    width: 120vh;
+    background-image: url(../../assets/images/atm-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.atm-container {
+    height: 258px;
+    width: 310px;
+    margin-right: 194px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
 .container-atmoverview {
+    height: 120px;
+    width: 250px;
+    margin-top: 88px;
+    gap: 10px;
     display: flex;
     flex-direction: row;
+    background-color: black;
     flex-wrap: wrap;
-    /* justify-content: center; */
     align-items: center;
-    gap: 20px;
     justify-content: space-between;
 }
 
 .option {
-    height: 50px;   
-    width: 250px;
+    height: 40px;   
+    width: 100px;
+    font-size: 10px;
     color: white;
-    background-color: black;
+    background-color: blue;
     text-align: center;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
     border: none;
-    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
 }
+
+
+.option:hover {
+    cursor: pointer;
+    background-color: darkblue;
+    transform: scale(1.1);
+}
+
+.atm-tapa-derecha {
+    height: 130px;
+    width: 50px;
+    /* font-size: 20px; */
+    position: fixed;
+    margin-top: -105px;
+    margin-left: 160px;
+    color: white;
+    background-image: url(../../assets/images/tapa.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.atm-tapa-izquierda {
+    height: 130px;
+    width: 50px;
+    /* font-size: 20px; */
+    position: fixed;
+    margin-top: -105px;
+    margin-left: -207px;
+    color: white;
+    background-image: url(../../assets/images/tapa.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.atm-button-right-arriba-1 {
+    height: 31px;
+    width: 50px;
+    /* font-size: 20px; */
+    position: fixed;
+    margin-top: -105px;
+    margin-left: 160px;
+    color: white;
+    background-image: url(../../assets/images/boton-izquierda-default.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.atm-button-right-arriba-1:hover {
+    cursor: pointer;
+    background-image: url(../../assets/images/boton-izquierda-selected.jpg);
+}
+
+.atm-button-left-arriba-1 {
+    height: 31px;
+    width: 50px;
+    /* font-size: 20px; */
+    position: fixed;
+    margin-top: -105px;
+    margin-left: -207px;
+    color: white;
+    background-image: url(../../assets/images/boton-derecha-default.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.atm-button-left-arriba-1:hover {
+    cursor: pointer;
+    background-image: url(../../assets/images/boton-derecha-selected.jpg);
+}
+
+
+.atm-button-right-arriba-2 {
+    height: 31px;
+    width: 50px;
+    /* font-size: 20px; */
+    position: fixed;
+    margin-top: -40px;
+    margin-left: 160px;
+    color: white;
+    background-image: url(../../assets/images/boton-izquierda-default.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.atm-button-right-arriba-2:hover {
+    cursor: pointer;
+    background-image: url(../../assets/images/boton-izquierda-selected.jpg);
+}
+
+.atm-button-left-arriba-2 {
+    height: 31px;
+    width: 50px;
+    /* font-size: 20px; */
+    position: fixed;
+    margin-top: -40px;
+    margin-left: -207px;
+    color: white;
+    background-image: url(../../assets/images/boton-derecha-default.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.atm-button-left-arriba-2:hover {
+    cursor: pointer;
+    background-image: url(../../assets/images/boton-derecha-selected.jpg);
+}
+
