@@ -1,0 +1,31 @@
+.bank-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+
+    /* background-color: black;
+    height: 20px;
+    width: 50px; */
+}
+
+.bank-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.bank-logo {
+    width: 80px;
+    height: 40px;
+}
+
+.bank-name {
+    color: black;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 15px;
+}

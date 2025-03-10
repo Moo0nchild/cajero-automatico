@@ -1,28 +1,28 @@
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { BankIcon } from '../../components/bankimage/BankIcon'
-import { useState } from 'react'
-import './RetirarTarjeta.css'
+import './PasswordTarjeta.css'
 
-export function RetirarTarjeta() {
+export function PasswordTarjeta() {
   const navigate = useNavigate()
   const [value, setValue] = useState('')
-  const [error, setError] = useState('')
+  const [error, setError] = useState('') // Estado para manejar errores
 
   const handleChange = (e) => {
     const newValue = e.target.value
 
-    // Validación: Solo números y máximo 11 caracteres
-    if (/^\d*$/.test(newValue) && newValue.length <= 11) {
+    // Permitir solo números y máximo 4 caracteres
+    if (/^\d*$/.test(newValue) && newValue.length <= 4) {
       setValue(newValue)
-      setError('') // Elimina el error si la entrada es válida
+      setError('') // Borra el error si la entrada es válida
     }
   }
 
   const handleSubmit = () => {
-    if (value.length !== 11) {
-      setError('El número de tarjeta debe tener exactamente 11 dígitos.')
+    if (value.length < 4) {
+      setError('El PIN debe tener exactamente 4 números.')
     } else {
-      navigate('/tarjetapswd') // Navega a la siguiente pantalla
+      navigate('/') // Cambia la ruta según tu flujo
     }
   }
 
@@ -38,32 +38,24 @@ export function RetirarTarjeta() {
         />
 
         <div className='container-atmoverview'>
-          <p className='atm-title'>Por favor digite su número de tarjeta</p>
+          <p className='atm-title'>Por favor ingrese su PIN de seguridad</p>
 
-          {/* Input para el número de tarjeta */}
+          {/* Input de PIN */}
           <input
             type='text'
             value={value}
             onChange={handleChange}
             className='input-tarjeta'
-            placeholder='Ingrese el numero de la tarjeta'
           />
 
           {/* Mensaje de error */}
-          {error && <p className='error-message'>{error}</p>}
+          {error && <p className='error-message-tarjeta'>{error}</p>}
 
-          {/* Botones de navegación */}
-          <div className='option-tarjeta' onClick={() => navigate('/')}>
+          {/* Botones */}
+          <div className='option-tarjeta' onClick={() => navigate('/atras')}>
             Atrás
           </div>
-          <div
-            className={`option-tarjeta ${
-              value.length !== 11 ? 'disabled' : ''
-            }`}
-            onClick={handleSubmit}
-          >
-            Continuar
-          </div>
+          <div className='option-tarjeta'>Continuar</div>
         </div>
 
         {/* Botones del cajero */}
@@ -72,13 +64,13 @@ export function RetirarTarjeta() {
           <div className='atm-button-right-arriba-1'></div>
           <div
             className='atm-button-right-arriba-2'
-            onClick={value.length === 11 ? handleSubmit : null} // Solo permite continuar si hay 11 dígitos
+            onClick={handleSubmit}
           ></div>
           <div className='atm-tapa-izquierda'></div>
           <div className='atm-button-left-arriba-1'></div>
           <div
             className='atm-button-left-arriba-2'
-            onClick={() => navigate('/')}
+            onClick={() => navigate('/tarjeta')}
           ></div>
         </div>
       </div>
