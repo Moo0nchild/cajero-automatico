@@ -1,0 +1,11 @@
+.atm-title-personalizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    font-size: 10px;
+    color: black;
+    font-weight: bold;
+    margin-top: -150px;
+}

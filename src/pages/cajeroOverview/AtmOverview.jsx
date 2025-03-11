@@ -13,7 +13,7 @@ export function AtmOverview() {
       <div className='atm-container'>
        <BankIcon width='40px' height='20px' marginTop='-170px' marginLeft='-130px' />
         <div className='container-atmoverview'>
-          <p className='atm-title'>Por favor seleccione su transaccion</p>
+          <p className='atm-title'>Por favor seleccione su transaccion:</p>
           <div className='option'>Retirar Dinero con Tarjeta</div>
           <div className='option'>Retirar Dinero con Nequi</div>
           <div className='option'>Retirar con Ahorro a la Mano</div>

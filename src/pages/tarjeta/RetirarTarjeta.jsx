@@ -2,11 +2,24 @@ import { useNavigate } from 'react-router-dom'
 import { BankIcon } from '../../components/bankimage/BankIcon'
 import { useState } from 'react'
 import './RetirarTarjeta.css'
+import Keypad from '../../components/keypad/Keypad'
 
 export function RetirarTarjeta() {
   const navigate = useNavigate()
   const [value, setValue] = useState('')
   const [error, setError] = useState('')
+
+  const handleKeyPress = (key) => {
+    if (key === 'CLEAR') {
+      setValue('') // Borra todo
+    } else if (key === 'CANCEL') {
+      setValue((prev) => prev.slice(0, -1)) // Borra el último dígito
+    } else if (key === 'ENTER') {
+      handleSubmit() // Intenta continuar
+    } else if (value.length < 11 && /^\d$/.test(key)) {
+      setValue((prev) => prev + key) // Agrega el número si aún hay espacio
+    }
+  }
 
   const handleChange = (e) => {
     const newValue = e.target.value
@@ -38,7 +51,7 @@ export function RetirarTarjeta() {
         />
 
         <div className='container-atmoverview'>
-          <p className='atm-title'>Por favor digite su número de tarjeta</p>
+          <p className='atm-title'>Por favor digite su número de tarjeta:</p>
 
           {/* Input para el número de tarjeta */}
           <input
@@ -46,7 +59,7 @@ export function RetirarTarjeta() {
             value={value}
             onChange={handleChange}
             className='input-tarjeta'
-            placeholder='Ingrese el numero de la tarjeta'
+            placeholder='Numero de la tarjeta'
           />
 
           {/* Mensaje de error */}
@@ -65,6 +78,8 @@ export function RetirarTarjeta() {
             Continuar
           </div>
         </div>
+
+        <Keypad onKeyPress={handleKeyPress} />
 
         {/* Botones del cajero */}
         <div className='atm-buttons'>
