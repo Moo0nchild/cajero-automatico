@@ -1,8 +1,29 @@
 import { useNavigate } from 'react-router-dom'
 import { BankIcon } from '../../components/bankimage/BankIcon'
+import { DineroARetirar } from '../../models/acarreo'
 
 export function ValoresARetirar() {
   const navigate = useNavigate()
+  const amounts = ['$50.000', '$100.000', '$200.000', 'Otros']
+
+  function valorClic(valor) {
+    const value = valor
+    switch (value) {
+      case '50000':
+        console.log('Dinero a retirar:', value)
+        DineroARetirar(value)
+        break
+      case '100000':
+        console.log('Dinero a retirar:', value)
+        DineroARetirar(value)
+        break
+      case '200000':
+        console.log('Dinero a retirar:', value)
+        DineroARetirar(value)
+        break
+    }
+  }
+
   return (
     <div className='page-atmoverview'>
       <div className='atm-container'>
@@ -12,33 +33,41 @@ export function ValoresARetirar() {
           marginTop='-170px'
           marginLeft='-130px'
         />
+
         <div className='container-atmoverview'>
-          <p className='atm-title'>Por favor seleccione la cantidad de su retiro:</p>
-          <div className='option'>$50.000</div>
-          <div className='option'>$100.000</div>
-          <div className='option'>$200.000</div>
-          {/* <div className='option'>600.000</div> */}
-          <div className='option'>Otros</div>
+          <p className='atm-title'>
+            Por favor seleccione la cantidad de su retiro:
+          </p>
+          {amounts.map((amount, index) => (
+            <div key={index} className='option'>
+              {amount}
+            </div>
+          ))}
         </div>
+
         <div className='atm-buttons'>
           <div className='atm-tapa-derecha'></div>
           <div
             className='atm-button-right-arriba-1'
-            // onClick={() => navigate('/nequi')}
-          ></div>
+            onClick={() => valorClic('100000')}
+          ></div>{' '}
+          {/* 100 */}
           <div
             className='atm-button-right-arriba-2'
             onClick={() => navigate('/advertencia')}
-          ></div>
+          ></div>{' '}
+          {/* otros */}
           <div className='atm-tapa-izquierda'></div>
           <div
             className='atm-button-left-arriba-1'
-            // onClick={() => navigate('/tarjeta')}
-          ></div>
+            onClick={() => valorClic('50000')}
+          ></div>{' '}
+          {/* 50 */}
           <div
             className='atm-button-left-arriba-2'
-            // onClick={() => navigate('/ahorro')}
-          ></div>
+            onClick={() => valorClic('200000')}
+          ></div>{' '}
+          {/* 200 */}
         </div>
       </div>
     </div>
