@@ -14,6 +14,7 @@ import { Advertencia } from './pages/advertencia/Advertencia'
 import { ProcesoExitoso } from './pages/procesando/ProcesoExitoso'
 import { SaldoUsuario } from './pages/saldo/SaldoUsuario'
 import { Recibo } from './pages/recibo/Recibo'
+import { ContraseñaAhorro } from './pages/ahorroALaMano/ContraseñaAhorro'
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path='/successful' element={<ProcesoExitoso />} />
         <Route path='/saldo' element={<SaldoUsuario />} />
         <Route path='/recibo' element={<Recibo />} />
+        <Route path='/ahorropswd' element={<ContraseñaAhorro />} />
       </Routes>
     </>
   )

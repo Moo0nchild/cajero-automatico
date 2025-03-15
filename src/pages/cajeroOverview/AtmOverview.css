@@ -2,8 +2,10 @@
     margin: 0px;
     padding: 0px;
     font-family: sans-serif;
-    /* background-color: #868686;  */
-    /*! Esto hay que cambiarlo */
+}
+
+body {
+    background-color: #868686; 
 }
 
 
@@ -24,7 +26,6 @@
     height: 258px;
     width: 310px;
     margin-right: 194px;
-    /* background-color: lightblue; */
     background-color: #e8eddf;
     display: flex;
     justify-content: center;
@@ -40,7 +41,6 @@
     gap: 10px;
     display: flex;
     flex-direction: row;
-    /* background-color: black; */
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
@@ -62,17 +62,9 @@
     transition: all 0.3s ease-in-out;
 }
 
-
-/* .option:hover {
-    cursor: pointer;
-    background-color: darkblue;
-    transform: scale(1.1);
-} */
-
 .atm-tapa-derecha {
     height: 130px;
     width: 50px;
-    /* font-size: 20px; */
     position: fixed;
     margin-top: -105px;
     margin-left: 160px;
@@ -93,7 +85,6 @@
 .atm-tapa-izquierda {
     height: 130px;
     width: 50px;
-    /* font-size: 20px; */
     position: fixed;
     margin-top: -105px;
     margin-left: -207px;
@@ -167,7 +158,6 @@
 .atm-button-right-arriba-2 {
     height: 31px;
     width: 50px;
-    /* font-size: 20px; */
     position: fixed;
     margin-top: -40px;
     margin-left: 160px;
@@ -193,7 +183,6 @@
 .atm-button-left-arriba-2 {
     height: 31px;
     width: 50px;
-    /* font-size: 20px; */
     position: fixed;
     margin-top: -40px;
     margin-left: -207px;

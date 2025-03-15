@@ -19,6 +19,13 @@
     "numero": "13113806006",
     "clave": "4312" ,
     "saldo": 700000
+  },
+  {
+    "nombre": "Prueba Ahorro a la Mano",
+    "tipo": "ahorro",
+    "numero": "16413806006",
+    "clave": "2222" ,
+    "saldo": 700000
   }
 ]
   
