@@ -1,25 +1,36 @@
 import { useNavigate } from 'react-router-dom'
 import { BankIcon } from '../../components/bankimage/BankIcon'
 import { DineroARetirar } from '../../models/acarreo'
+import { userStore } from '../../store/userStore'
 
 export function ValoresARetirar() {
   const navigate = useNavigate()
   const amounts = ['$50.000', '$100.000', '$200.000', 'Otros']
+  const { setValorTransaccion, realizarRetiro } = userStore()
 
   function valorClic(valor) {
     const value = valor
     switch (value) {
       case '50000':
         console.log('Dinero a retirar:', value)
-        DineroARetirar(value)
+        DineroARetirar(Number(value))
+        realizarRetiro(Number(value))
+        setValorTransaccion(Number(value))
+        navigate('/successful')
         break
       case '100000':
         console.log('Dinero a retirar:', value)
-        DineroARetirar(value)
+        DineroARetirar(Number(value))
+        realizarRetiro(Number(value))
+        setValorTransaccion(Number(value))
+        navigate('/successful')
         break
       case '200000':
         console.log('Dinero a retirar:', value)
-        DineroARetirar(value)
+        DineroARetirar(Number(value))
+        realizarRetiro(Number(value))
+        setValorTransaccion(Number(value))
+        navigate('/successful')
         break
     }
   }
@@ -51,23 +62,19 @@ export function ValoresARetirar() {
             className='atm-button-right-arriba-1'
             onClick={() => valorClic('100000')}
           ></div>{' '}
-          {/* 100 */}
           <div
             className='atm-button-right-arriba-2'
             onClick={() => navigate('/advertencia')}
           ></div>{' '}
-          {/* otros */}
           <div className='atm-tapa-izquierda'></div>
           <div
             className='atm-button-left-arriba-1'
             onClick={() => valorClic('50000')}
           ></div>{' '}
-          {/* 50 */}
           <div
             className='atm-button-left-arriba-2'
             onClick={() => valorClic('200000')}
           ></div>{' '}
-          {/* 200 */}
         </div>
       </div>
     </div>

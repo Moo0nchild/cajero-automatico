@@ -1,0 +1,74 @@
+.atm-recibo-title {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    margin-top: -150px;
+    font-weight: bolder;
+}
+
+.atm-recibo-nombre {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    margin-top: -150px;
+    margin-left: 120px;
+    
+}
+
+.atm-recibo-transaccion {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    margin-top: -110px;
+    font-weight: bolder;
+}
+
+.atm-recibo-valorTransaccion {
+
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    margin-top: -110px;
+    margin-left: 120px;
+}
+
+.atm-recibo-saldo {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    margin-top: -70px;
+    font-weight: bolder;
+}
+
+.atm-recibo-valorSaldo {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    margin-top: -70px;
+    margin-left: 120px;
+}
+
+.atm-recibo-fecha {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    margin-top: -30px;
+    font-weight: bolder;
+}
+
+.atm-recibo-fechaValor {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    margin-top: -30px;
+    margin-left: 120px;
+}
+

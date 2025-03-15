@@ -1,0 +1,42 @@
+.atm-sucessful-advertencia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    margin-top: -60px;
+    margin-left: 23px;
+}
+
+.billetes-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  margin-left: 1600px;
+}
+
+.billete-item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.billete-imagen {
+  width: 250px; 
+  height: auto;
+}
+
+.billete-cantidad {
+  width: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-right: 40px;
+}

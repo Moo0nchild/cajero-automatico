@@ -11,7 +11,9 @@ import { ValoresARetirar } from './pages/retiro/ValoresARetirar'
 import { ValorPersonalizado } from './pages/retiro/ValorPersonalizado'
 import Keypad from './components/keypad/Keypad'
 import { Advertencia } from './pages/advertencia/Advertencia'
-// import { Prueba } from './components/prueba/Prueba'
+import { ProcesoExitoso } from './pages/procesando/ProcesoExitoso'
+import { SaldoUsuario } from './pages/saldo/SaldoUsuario'
+import { Recibo } from './pages/recibo/Recibo'
 
 function App() {
   return (
@@ -28,6 +30,9 @@ function App() {
         <Route path='/otrosvalores' element={<ValorPersonalizado />} />
         <Route path='/keypad' element={<Keypad />} />
         <Route path='/advertencia' element={<Advertencia />} />
+        <Route path='/successful' element={<ProcesoExitoso />} />
+        <Route path='/saldo' element={<SaldoUsuario />} />
+        <Route path='/recibo' element={<Recibo />} />
       </Routes>
     </>
   )

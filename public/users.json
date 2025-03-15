@@ -1,154 +1,24 @@
-
 [
   {
+    "nombre": "Deimis Henao",
     "tipo": "tarjeta",
     "numero": "15111111118",
-    "clave": {
-      "codigo": "2020",
-      "expiracion": "12/26",
-      "saldo": 1000,
-      "bloqueada": false
-    }
+    "clave": "2020",
+    "saldo": 1000000
   },
   {
-    "tipo": "celular",
-    "numero": "03000000001",
-    "clave": {
-      "codigo": "",
-      "expiracion": "",
-      "saldo": 0,
-      "bloqueada": false
-    }
+    "nombre": "Juan Yaneth",
+    "tipo": "nequi",
+    "numero": "03152062288",
+    "clave": "" ,
+    "saldo": 300000
   },
   {
-    "tipo": "tarjeta",
-    "numero": "5111111117",
-    "clave": {
-      "codigo": "1212",
-      "expiracion": "12/26",
-      "saldo": 1500,
-      "bloqueada": false
-    }
-  },
-  {
-    "tipo": "tarjeta",
-    "numero": "5111111116",
-    "clave": {
-      "codigo": "3434",
-      "expiracion": "11/25",
-      "saldo": 800,
-      "bloqueada": false
-    }
-  },
-  {
-    "tipo": "celular",
-    "numero": "03108167406",
-    "clave": {
-      "codigo": "",
-      "expiracion": "",
-      "saldo": 0,
-      "bloqueada": false
-    }
-  },
-  {
-    "tipo": "tarjeta",
-    "numero": "5111111115",
-    "clave": {
-      "codigo": "5656",
-      "expiracion": "08/24",
-      "saldo": 3000,
-      "bloqueada": false
-    }
-  },
-  {
-    "tipo": "celular",
-    "numero": "03000000003",
-    "clave": {
-      "codigo": "",
-      "expiracion": "",
-      "saldo": 0,
-      "bloqueada": false
-    }
-  },
-  {
-    "tipo": "tarjeta",
-    "numero": "5111111114",
-    "clave": {
-      "codigo": "7878",
-      "expiracion": "05/23",
-      "saldo": 2200,
-      "bloqueada": false
-    }
-  },
-  {
-    "tipo": "celular",
-    "numero": "03000000004",
-    "clave": {
-      "codigo": "",
-      "expiracion": "",
-      "saldo": 0,
-      "bloqueada": false
-    }
-  },
-  {
-    "tipo": "tarjeta",
-    "numero": "5111111113",
-    "clave": {
-      "codigo": "8989",
-      "expiracion": "07/24",
-      "saldo": 2500,
-      "bloqueada": false
-    }
-  },
-  {
-    "tipo": "celular",
-    "numero": "03000000005",
-    "clave": {
-      "codigo": "",
-      "expiracion": "",
-      "saldo": 0,
-      "bloqueada": false
-    }
-  },
-  {
-    "tipo": "tarjeta",
-    "numero": "5111111111",
-    "clave": {
-      "codigo": "9090",
-      "expiracion": "04/24",
-      "saldo": 100,
-      "bloqueada": false
-    }
-  },
-  {
-    "tipo": "celular",
-    "numero": "03000000006",
-    "clave": {
-      "codigo": "",
-      "expiracion": "",
-      "saldo": 0,
-      "bloqueada": false
-    }
-  },
-  {
-    "tipo": "tarjeta",
-    "numero": "51111111120",
-    "clave": {
-      "codigo": "1010",
-      "expiracion": "09/23",
-      "saldo": 5000,
-      "bloqueada": false
-    }
-  },
-  {
-    "tipo": "celular",
-    "numero": "03000000007",
-    "clave": {
-      "codigo": "",
-      "expiracion": "",
-      "saldo": 0,
-      "bloqueada": false
-    }
+    "nombre": "Luis Fernando",
+    "tipo": "ahorro",
+    "numero": "13113806006",
+    "clave": "4312" ,
+    "saldo": 700000
   }
 ]
   

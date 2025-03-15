@@ -4,12 +4,19 @@ import { BankIcon } from '../../components/bankimage/BankIcon'
 import Keypad from '../../components/keypad/Keypad'
 import './ValorPersonalizado.css'
 import { DineroARetirar } from '../../models/acarreo'
+import { userStore } from '../../store/userStore'
 
 export function ValorPersonalizado() {
   const navigate = useNavigate()
   const [value, setValue] = useState('')
   const [error, setError] = useState('')
   const MAX_DIGITS = 7
+  const {
+    setValorTransaccion,
+    saldoTotal,
+    realizarRetiro,
+    setBilletesStructure,
+  } = userStore()
 
   const handleKeyPress = (key) => {
     switch (key) {
@@ -30,22 +37,42 @@ export function ValorPersonalizado() {
   }
 
   const handleChange = (e) => {
-    const newValue = e.target.value
-    if (/^\d*$/.test(newValue) && newValue.length <= MAX_DIGITS) {
+    const newValue = e.target.value.replace(/\D/g, '')
+
+    if (newValue === '' || newValue.length <= MAX_DIGITS) {
       setValue(newValue)
       setError('')
     }
   }
 
   const handleSubmit = async () => {
-    const montoValido = await DineroARetirar(value)
-    if (value === '') {
-      setError('Por favor ingrese un monto')
-    } else if (montoValido) {
-        console.log('Monto a retirar:', value)
-        console.log('Dinero a retirar:', montoValido)
-        navigate('/')
-      }
+    if (!value || value === '0') {
+      return setError('Por favor ingrese un monto')
+    }
+
+    const montoNumerico = Number(value)
+
+    if (montoNumerico < 10000 || montoNumerico > 3000000) {
+      return setError('El monto debe estar entre 10.000 y 3.000.000')
+    }
+
+    if (montoNumerico % 10000 !== 0) {
+      return setError('El monto debe ser múltiplo de 10')
+    }
+
+    if (saldoTotal < montoNumerico) {
+      return setError('Saldo insuficiente')
+    }
+
+    const montoValido = await DineroARetirar(montoNumerico)
+    setBilletesStructure(montoValido)
+
+    if (montoValido) {
+      console.log('Monto a retirar:', montoNumerico)
+      realizarRetiro(montoNumerico)
+      setValorTransaccion(montoNumerico)
+      navigate('/successful')
+    }
   }
 
   return (
@@ -73,14 +100,8 @@ export function ValorPersonalizado() {
           />
           {error && <p className='error-message-tarjeta-1'>{error}</p>}
 
-          <div className='option-tarjeta'>
-            Atrás
-          </div>
-          <div
-            className='option-tarjeta'
-          >
-            Continuar
-          </div>
+          <div className='option-tarjeta'>Atrás</div>
+          <div className='option-tarjeta'>Continuar</div>
         </div>
 
         <Keypad onKeyPress={handleKeyPress} />
@@ -96,7 +117,7 @@ export function ValorPersonalizado() {
           <div className='atm-button-left-arriba-1'></div>
           <div
             className='atm-button-left-arriba-2'
-            onClick={() => navigate('/valoraretiro')}
+            onClick={() => navigate('/saldo')}
           ></div>
         </div>
       </div>

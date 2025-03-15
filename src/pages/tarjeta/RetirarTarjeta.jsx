@@ -4,6 +4,7 @@ import { BankIcon } from '../../components/bankimage/BankIcon'
 import Keypad from '../../components/keypad/Keypad'
 import './RetirarTarjeta.css'
 import { validarUsuario } from '../../models/validarUsuario'
+import { userStore } from '../../store/userStore'
 
 export function RetirarTarjeta() {
   const navigate = useNavigate()
@@ -33,6 +34,7 @@ export function RetirarTarjeta() {
     }
   }
 
+  const { setNombre, setSaldoTotal } = userStore()
   const handleSubmit = async () => {
     if (value.length !== maxDigits) {
       setError(
@@ -46,6 +48,9 @@ export function RetirarTarjeta() {
 
       if (resultado.valido) {
         console.log('El usuario es válido')
+        setNombre(resultado.nombreUsuario)
+        setSaldoTotal(resultado.saldoTotal)
+
         navigate('/tarjetapswd')
       } else {
         setError(resultado.mensaje)

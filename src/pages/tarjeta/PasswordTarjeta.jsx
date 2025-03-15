@@ -42,7 +42,7 @@ export function PasswordTarjeta() {
       const passValid = await validarContraseña(value)
       if (passValid.valido) {
         console.log('El PIN es válido')
-        navigate('/valoraretiro')
+        navigate('/saldo')
       } else {
         setError(passValid.mensaje)
       }

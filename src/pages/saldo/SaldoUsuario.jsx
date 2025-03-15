@@ -1,9 +1,17 @@
 import { useNavigate } from 'react-router-dom'
+import { userStore } from '../../store/userStore'
+import './SaldoUsuario.css'
 import { BankIcon } from '../../components/bankimage/BankIcon'
-import './Advertencia.css'
 
-export function Advertencia() {
+export function SaldoUsuario() {
   const navigate = useNavigate()
+  const { saldoTotal, nombre } = userStore()
+
+  function handleCerrarSesion() {
+    sessionStorage.removeItem('userStore')
+    console.log('cerrando sesion')
+    navigate('/')
+  }
 
   return (
     <div className='page-atmoverview'>
@@ -16,21 +24,14 @@ export function Advertencia() {
         />
 
         <div className='container-atmoverview'>
-          <p className='atm-title-advertencia'>
-            Por favor siga las siguientes recomendaciones:
-          </p>
-          <p className='atm-title-advertencia-1'>
-            1. El monto maximo a retirar es $3.000.000
-          </p>
-          <p className='atm-title-advertencia-2'>
-            2. Recuerde que solo se acepta valores multiplos de 10
-          </p>
-          <p className='atm-title-advertencia-3'>
-            3. Digite el valor sin puntos ni comas
+          <p className='atm-saldo-nombre'>Buenas, {nombre}</p>
+          <p className='atm-saldo-title'>Su saldo disponible es:</p>
+          <p className='atm-saldo-saldo'>
+            {'$' + Number(saldoTotal).toLocaleString('es-ES')}
           </p>
 
-          <div className='option-tarjeta'>Atrás</div>
-          <div className={`option-tarjeta `}>Continuar</div>
+          <div className='option-tarjeta'>Salir</div>
+          <div className='option-tarjeta'>Retirar Dinero</div>
         </div>
 
         <div className='atm-buttons'>
@@ -38,13 +39,13 @@ export function Advertencia() {
           <div className='atm-button-right-arriba-1'></div>
           <div
             className='atm-button-right-arriba-2'
-            onClick={() => navigate('/otrosvalores')}
+            onClick={() => navigate('/valoraretiro')}
           ></div>
           <div className='atm-tapa-izquierda'></div>
           <div className='atm-button-left-arriba-1'></div>
           <div
             className='atm-button-left-arriba-2'
-            onClick={() => navigate('/valoraretiro')}
+            onClick={() => handleCerrarSesion()}
           ></div>
         </div>
       </div>
