@@ -1,0 +1,53 @@
+.keypad-container-two {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 300px;
+    padding: 15px;
+    background: #ccc;
+    border-radius: 10px;
+    position: fixed;
+    margin-bottom: 200px;
+    margin-left: 1300px;
+  }
+  
+  .keypad-button-two {
+    padding: 15px;
+    font-size: 18px;
+    background: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .keypad-button-two:hover {
+    background: #bbb;
+  }
+  
+  .cancel-two {
+    background: red;
+    color: white;
+  }
+  
+  .cancel-two:hover {
+    background: darkred;
+  }
+  
+  .clear-two {
+    background: yellow;
+  }
+  
+  .clear-two:hover {
+    background: gold;
+  }
+  
+  .enter-two {
+    background: green;
+    color: white;
+  }
+  
+  .enter-two:hover {
+    background: darkgreen;
+  }
+  

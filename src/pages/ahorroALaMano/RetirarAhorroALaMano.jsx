@@ -82,7 +82,7 @@ export function RetirarAhorroALaMano() {
             value={value}
             onChange={handleChange}
             className='input-tarjeta'
-            placeholder='Número de la tarjeta'
+            placeholder='Número de la cuenta'
           />
           {error && <p className='error-message-tarjeta-1'>{error}</p>}
           <div className='option-tarjeta'>Atrás</div>

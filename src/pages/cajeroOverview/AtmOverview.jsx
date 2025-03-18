@@ -30,7 +30,6 @@ export function AtmOverview() {
             </div>
           ))}
         </div>
-
         <div className='atm-buttons'>
           <div className='atm-tapa-derecha'></div>
           <div

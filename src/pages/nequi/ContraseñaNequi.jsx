@@ -1,15 +1,17 @@
 import { useNavigate } from 'react-router-dom'
 import { BankIcon } from '../../components/bankimage/BankIcon'
-import Keypad from '../../components/keypad/Keypad'
-import { validarContraseñaAhorro } from '../../models/validarContraseñaAhorro'
-import './ContraseñaAhorro.css'
+import { KeypadTwo } from '../../components/keypad/KeypadTwo'
+import { Telefono } from '../../components/telefono/telefono'
+import { validarContraseñaNequi } from '../../models/validarContraseñaNequi'
+import './ContraseñaNequi.css'
 import { useState } from 'react'
+import { userStore } from '../../store/userStore'
 
-export function ContraseñaAhorro() {
+export function ContrasenaNequi() {
   const navigate = useNavigate()
   const [value, setValue] = useState('')
   const [error, setError] = useState('')
-  const PIN_LENGTH = 4
+  const PIN_LENGTH = 6
 
   const handleKeyPress = (key) => {
     const actions = {
@@ -33,13 +35,17 @@ export function ContraseñaAhorro() {
     }
   }
 
+  const {
+    contraseñaDinamica,
+  } = userStore()
+
   const handleSubmit = async () => {
     if (value.length < PIN_LENGTH) {
       setError(`El PIN debe tener exactamente ${PIN_LENGTH} números.`)
     }
 
     try {
-      const passValid = await validarContraseñaAhorro(value)
+      const passValid = await validarContraseñaNequi(value, contraseñaDinamica)
       if (passValid.valido) {
         console.log('El PIN es válido')
         navigate('/saldo')
@@ -64,7 +70,7 @@ export function ContraseñaAhorro() {
         <div className='container-atmoverview'>
           <p className='atm-title'>Por favor ingrese su PIN de seguridad:</p>
           <input
-            placeholder='****'
+            placeholder='******'
             type='password'
             value={value}
             onChange={handleChange}
@@ -74,7 +80,8 @@ export function ContraseñaAhorro() {
           <div className='option-tarjeta'>Atrás</div>
           <div className={'option-tarjeta'}>Continuar</div>
         </div>
-        <Keypad onKeyPress={handleKeyPress} />
+        <KeypadTwo onKeyPress={handleKeyPress} />
+        <Telefono />
         <div className='atm-buttons'>
           <div className='atm-tapa-derecha'></div>
           <div className='atm-button-right-arriba-1'></div>
@@ -86,7 +93,7 @@ export function ContraseñaAhorro() {
           <div className='atm-button-left-arriba-1'></div>
           <div
             className='atm-button-left-arriba-2'
-            onClick={() => navigate('/ahorro')}
+            onClick={() => navigate('/nequi')}
           ></div>
         </div>
       </div>

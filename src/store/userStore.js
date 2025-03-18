@@ -9,6 +9,8 @@ export const userStore = create(
       valorTransaccion: '',
       transaccionAcumulada: '',
       billetesStructure: {},
+      cuentaDinamica: 0,
+      contraseñaDinamica: null,
 
       setSaldoTotal: (value) => {
         set({ saldoTotal: value })
@@ -18,6 +20,8 @@ export const userStore = create(
       setValorTransaccion: (value) => set({ valorTransaccion: value }),
       setTransaccionAcumulada: (value) => set({ transaccionAcumulada: value }),
       setBilletesStructure: (value) => set({ billetesStructure: value }),
+      setCuentaDinamica: (value) => set({ cuentaDinamica: value }),
+      setContraseñaDinamica: (value) => set({ contraseñaDinamica: value }),
 
       realizarRetiro: (monto) => {
         const saldoActual = get().saldoTotal

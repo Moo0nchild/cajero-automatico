@@ -15,6 +15,8 @@ import { ProcesoExitoso } from './pages/procesando/ProcesoExitoso'
 import { SaldoUsuario } from './pages/saldo/SaldoUsuario'
 import { Recibo } from './pages/recibo/Recibo'
 import { ContraseñaAhorro } from './pages/ahorroALaMano/ContraseñaAhorro'
+import { Telefono } from './components/telefono/telefono'
+import { ContrasenaNequi } from './pages/nequi/ContraseñaNequi'
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
         <Route path='/' element={<AtmOverview />} />
         <Route path='/tarjeta' element={<RetirarTarjeta />} />
         <Route path='/nequi' element={<RetirarNequi />} />
+        <Route path='/nequipswd' element={<ContrasenaNequi />} />
         <Route path='/ahorro' element={<RetirarAhorroALaMano />} />
         <Route path='/usuarios' element={<Usuarios />} />
         <Route path='/icono' element={<BankIcon />} />
@@ -35,6 +38,7 @@ function App() {
         <Route path='/saldo' element={<SaldoUsuario />} />
         <Route path='/recibo' element={<Recibo />} />
         <Route path='/ahorropswd' element={<ContraseñaAhorro />} />
+        <Route path='/telefono' element={<Telefono />} />
       </Routes>
     </>
   )

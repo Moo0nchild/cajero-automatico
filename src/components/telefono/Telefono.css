@@ -1,0 +1,218 @@
+.telefono-container {
+    /* background-color: black; */
+    border-radius: 20px;
+    width: 170px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    margin-top: -190px;
+    margin-left: 850px;
+}
+
+.nequi-icono {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    position: fixed;
+    margin-top: -270px;
+    margin-right: 100px;
+}
+
+.nequi-icono:hover {
+    cursor: pointer;
+}
+
+.nequi-text {
+    font-family: sans-serif;
+    position: fixed;
+    margin-top: -210px;
+    margin-right: 100px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.telefono-container-clicked {
+    background-color: white;
+    border-radius: 20px;
+    border: 5px solid black;
+    width: 170px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: auto; */
+    position: fixed;
+    margin-top: -190px;
+    margin-left: 850px;
+    cursor: pointer;
+
+}
+
+.telefono-bg {
+    position: fixed;
+    background-color: white;
+    width: 170px;
+    height: auto;
+}
+
+
+.telefono-nequi-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    gap: 3px;
+}
+
+.telefono-nequi-header {
+    color: #190e4f;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-direction: row;
+    font-size: 12px;
+}
+
+.telefono-nequi-header img {
+    width: 15px;
+    height: 15px;
+}
+
+.telefono-nequi-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: white;
+    gap: 5px;
+}
+
+.telefono-nequi-content img {
+    width: 50px;
+    height: 50px;
+}
+
+.telefono-nequi-content-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #190e4f;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 7px;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    gap: 2px;
+}
+
+.telefono-nequi-content-text-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #190e4f;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 10px;
+    width: 100%;
+    height: 60px;
+}
+
+.telefono-nequi-content-2 {
+    padding: 0px 5px 0px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2px;
+    color: #190e4f;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 8px;
+    width: 90%;
+    height: 40px;
+}
+
+.telefono-nequi-footer-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ebe7f5;
+    color: #190e4f;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 10px;
+    margin: 0px 5px 0px 5px;
+    width: 90%;
+    height: 40px;
+}
+
+.telefono-nequi-footer-1 p {
+    padding: 0px 5px 0px 5px;
+}
+
+.telefono-nequi-footer-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: solid 1px #190e4f;
+    color: #190e4f;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 7px;
+    padding: 0px 5px 0px 5px;
+    width: 83%;
+    height: 40px;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.telefono-nequi-footer-2 img {
+    width: 15px;
+    height: 15px;
+}
+
+.telefono-nequi-cancelar {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    border-radius: 5px;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px #190e4f;
+    color: #190e4f;
+    background-color: none;
+    height: 20px;
+    width: 90%;
+    transition: all 0.2s ease-in-out;
+    font-size: 9px;
+}
+
+.telefono-nequi-cancelar:hover {
+    flex-direction: column;
+    border: solid 1px #190e4f;
+    color: white;
+    background-color: #190e4f;
+}
+
+.telefono-nequi-footer-1-1 {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
