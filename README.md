@@ -1,8 +1,17 @@
-# React + Vite
+# Cajero Automatico 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esto es un proyecto de aula de la materia Sistemas de Informacion
 
-Currently, two official plugins are available:
+El cajero esta diseñado para funcionar en una resolucion de pantalla de 1366 x 768
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+Para poder correr el cajero, siga los siguientes pasos (No olvide que necesita node y npm para poder correr el programa):
+* Instale las dependencias necesarias, puede hacerlo automaticamente con el siguiente comando:
+  
+  ```
+    npm install
+  ```
+* Para correr el programa, utilice el siguiente comando:
+```
+    npm run dev
+```
