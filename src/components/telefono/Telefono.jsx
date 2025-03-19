@@ -22,11 +22,11 @@ export function Telefono() {
     setMostrarContenido(true)
     setCuentaDinamica(cuentaDinamica + 1)
     setContador(60)
-    setVerCodigo(false) // Restablecer la visibilidad del código
+    setVerCodigo(false)
 
     const nuevoCodigo = generarCodigo()
     setCodigo(nuevoCodigo)
-    setContraseñaDinamica(nuevoCodigo) // Ahora se asigna correctamente
+    setContraseñaDinamica(nuevoCodigo)
   }
 
   useEffect(() => {
@@ -39,7 +39,6 @@ export function Telefono() {
     return () => clearInterval(interval)
   }, [mostrarContenido, contador])
 
-  // Cuando el código cambie, actualiza `setContraseñaDinamica`
   useEffect(() => {
     if (codigo !== null) {
       setContraseñaDinamica(codigo)

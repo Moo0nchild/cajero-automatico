@@ -5,10 +5,6 @@
     flex-direction: column;
     height: 100vh;
     position: fixed;
-
-    /* background-color: black;
-    height: 20px;
-    width: 50px; */
 }
 
 .bank-icon {
@@ -25,7 +21,7 @@
 
 .bank-name {
     color: black;
-    font-family: sans-serif;
+    font-family: poppins;
     font-weight: bolder;
     font-size: 15px;
 }

@@ -15,7 +15,6 @@ import { ProcesoExitoso } from './pages/procesando/ProcesoExitoso'
 import { SaldoUsuario } from './pages/saldo/SaldoUsuario'
 import { Recibo } from './pages/recibo/Recibo'
 import { ContraseñaAhorro } from './pages/ahorroALaMano/ContraseñaAhorro'
-import { Telefono } from './components/telefono/telefono'
 import { ContrasenaNequi } from './pages/nequi/ContraseñaNequi'
 
 function App() {
@@ -38,7 +37,6 @@ function App() {
         <Route path='/saldo' element={<SaldoUsuario />} />
         <Route path='/recibo' element={<Recibo />} />
         <Route path='/ahorropswd' element={<ContraseñaAhorro />} />
-        <Route path='/telefono' element={<Telefono />} />
       </Routes>
     </>
   )

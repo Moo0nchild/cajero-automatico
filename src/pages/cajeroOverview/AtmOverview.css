@@ -49,17 +49,29 @@ body {
 .option {
     border-radius: 10px;
     height: 50px;   
-    width: 110px;
+    /* width: 110px; */
+    width: 120px;
+    padding: 0px 5px 0px 5px;
     font-size: 10px;
     color: white;
-    background-color: blue;
+    /* background-color: blue; */
+    background-color: #82ac9f;
     text-align: center;
     justify-content: center;
     align-items: center;
     display: flex;
+    font-family: sans-serif;
+    font-weight: bold;
     flex-direction: column;
     border: none;
     transition: all 0.3s ease-in-out;
+    gap: 5px;
+}
+
+.option img {
+    height: 70%;
+    width: 40%;
+    border-radius: 5px;
 }
 
 .atm-tapa-derecha {
@@ -105,7 +117,6 @@ body {
 .atm-button-right-arriba-1 {
     height: 31px;
     width: 50px;
-    /* font-size: 20px; */
     position: fixed;
     margin-top: -105px;
     margin-left: 160px;
@@ -131,7 +142,6 @@ body {
 .atm-button-left-arriba-1 {
     height: 31px;
     width: 50px;
-    /* font-size: 20px; */
     position: fixed;
     margin-top: -105px;
     margin-left: -207px;
@@ -214,5 +224,6 @@ body {
     font-size: 12px;
     color: black;
     font-weight: bold;
+    font-family: poppins;
     margin-top: -150px;
 }

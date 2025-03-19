@@ -58,7 +58,9 @@
     width: 90px;
     font-size: 10px;
     color: white;
-    background-color: blue;
+    /* background-color: blue; */
+    background-color: #0b2545;
+    font-weight: bold;
     text-align: center;
     justify-content: center;
     align-items: center;

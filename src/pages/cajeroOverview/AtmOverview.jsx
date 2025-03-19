@@ -1,15 +1,19 @@
 import { useNavigate } from 'react-router-dom'
 import './AtmOverview.css'
 import { BankIcon } from '../../components/bankimage/BankIcon'
+import iconoNequi from '../../assets/images/prueba-nequi.jpg'
+import iconoAhorro from '../../assets/images/unnamed.png'
+import iconoTarjeta from '../../assets/images/visa.png'
+import iconoUser from '../../assets/images/user.png'
 
 export function AtmOverview() {
   const navigate = useNavigate()
 
   const options = [
-    { label: 'Retirar Dinero con Tarjeta' },
-    { label: 'Retirar Dinero con Nequi' },
-    { label: 'Retirar con Ahorro a la Mano' },
-    { label: 'Mirar Usuarios' },
+    { label: 'Retirar Dinero con Tarjeta', img: iconoTarjeta },
+    { label: 'Retirar Dinero con Nequi', img: iconoNequi },
+    { label: 'Retirar con Ahorro a la Mano', img: iconoAhorro },
+    { label: '  Mirar Usuarios ', imagen: iconoUser },
   ]
 
   return (
@@ -25,7 +29,23 @@ export function AtmOverview() {
         <div className='container-atmoverview'>
           <p className='atm-title'>Por favor seleccione su transacción:</p>
           {options.map((option, index) => (
-            <div key={index} className='option'>
+            <div
+              key={index}
+              className='option'
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+              }}
+            >
+              {option.img && <img src={option.img} alt={option.label} />}
+              {option.imagen && (
+                <img
+                  src={option.imagen}
+                  alt={option.label}
+                  style={{ width: '35%', height: '70%' }}
+                />
+              )}
               {option.label}
             </div>
           ))}

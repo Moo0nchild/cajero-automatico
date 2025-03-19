@@ -5,7 +5,7 @@ export function Usuarios() {
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch('/users.json') // ✅ Quita "public/"
+    fetch('/users.json')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Error al cargar los datos')
@@ -24,7 +24,10 @@ export function Usuarios() {
         {usuarios.length > 0 ? (
           usuarios.map((user, index) => (
             <li key={index}>
-              {user.numero} - {user.clave.codigo}
+              {`Nombre: ${user.nombre} - `}
+              {`Tipo: ${user.tipo} - `}
+              {`Numero: ${user.numero} - `}
+              {`Clave: ${user.clave}`}
             </li>
           ))
         ) : (

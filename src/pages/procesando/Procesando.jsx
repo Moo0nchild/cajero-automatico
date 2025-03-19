@@ -5,7 +5,6 @@ export function Procesando() {
   return (
     <div className='page-atmoverview'>
       <div className='atm-container'>
-        {/* Ícono del banco */}
         <BankIcon
           width='40px'
           height='20px'

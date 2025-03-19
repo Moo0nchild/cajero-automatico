@@ -35,27 +35,33 @@ export function ContrasenaNequi() {
     }
   }
 
-  const {
-    contraseñaDinamica,
-  } = userStore()
+  const { contraseñaDinamica, setCuentaDinamica } = userStore()
 
   const handleSubmit = async () => {
     if (value.length < PIN_LENGTH) {
-      setError(`El PIN debe tener exactamente ${PIN_LENGTH} números.`)
+      setError(
+        `La Clave Dinamica debe tener exactamente ${PIN_LENGTH} números.`
+      )
     }
 
     try {
       const passValid = await validarContraseñaNequi(value, contraseñaDinamica)
       if (passValid.valido) {
-        console.log('El PIN es válido')
+        console.log('La clave dinamica es válida')
         navigate('/saldo')
       } else {
         setError(passValid.mensaje)
       }
     } catch (error) {
-      setError('Error al validar el PIN')
+      setError('Error al validar la clave dinamica')
       console.error(error)
     }
+  }
+
+  function botonAtras() {
+    sessionStorage.removeItem('userStore')
+    setCuentaDinamica(0)
+    navigate('/nequi')
   }
 
   return (
@@ -68,7 +74,7 @@ export function ContrasenaNequi() {
           marginLeft='-130px'
         />
         <div className='container-atmoverview'>
-          <p className='atm-title'>Por favor ingrese su PIN de seguridad:</p>
+          <p className='atm-title'>Por favor ingrese su clave dinamica:</p>
           <input
             placeholder='******'
             type='password'
@@ -93,7 +99,7 @@ export function ContrasenaNequi() {
           <div className='atm-button-left-arriba-1'></div>
           <div
             className='atm-button-left-arriba-2'
-            onClick={() => navigate('/nequi')}
+            onClick={() => botonAtras()}
           ></div>
         </div>
       </div>
