@@ -5,11 +5,13 @@ import './Recibo.css'
 
 export function Recibo() {
   const navigate = useNavigate()
-  const { saldoTotal, nombre, valorTransaccion } = userStore()
+  const { saldoTotal, nombre, valorTransaccion, setBilletesStructure } =
+    userStore()
   const fechaHoraActual = new Date().toLocaleString()
 
   function handleCerrarSesion() {
     sessionStorage.removeItem('userStore')
+    setBilletesStructure({})
     console.log('cerrando sesion')
     navigate('/')
   }
@@ -37,6 +39,8 @@ export function Recibo() {
           </p>
           <p className='atm-recibo-fecha'>Fecha:</p>
           <p className='atm-recibo-fechaValor'>{fechaHoraActual}</p>
+          <p className='atm-recibo-retirosrest'>Retiros Restantes:</p>
+          <p className='atm-recibo-valorretirosrest'>{saldoTotal / 10000}</p>
 
           <div className='option-tarjeta'>Salir</div>
           <div className='option-tarjeta'>Ver Cuenta</div>

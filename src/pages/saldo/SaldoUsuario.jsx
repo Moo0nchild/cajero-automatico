@@ -5,10 +5,11 @@ import { BankIcon } from '../../components/bankimage/BankIcon'
 
 export function SaldoUsuario() {
   const navigate = useNavigate()
-  const { saldoTotal, nombre } = userStore()
+  const { saldoTotal, nombre, setBilletesStructure } = userStore()
 
   function handleCerrarSesion() {
     sessionStorage.removeItem('userStore')
+    setBilletesStructure({})
     console.log('cerrando sesion')
     navigate('/')
   }

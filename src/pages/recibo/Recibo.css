@@ -72,3 +72,21 @@
     margin-left: 120px;
 }
 
+.atm-recibo-retirosrest {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    margin-top: 10px;
+    font-weight: bolder;
+}
+
+.atm-recibo-valorretirosrest {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    margin-top: 10px;
+    margin-left: 120px;
+}
+

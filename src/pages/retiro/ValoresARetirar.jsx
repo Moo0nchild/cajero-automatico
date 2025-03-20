@@ -6,32 +6,18 @@ import { userStore } from '../../store/userStore'
 export function ValoresARetirar() {
   const navigate = useNavigate()
   const amounts = ['$50.000', '$100.000', '$200.000', 'Otros']
-  const { setValorTransaccion, realizarRetiro } = userStore()
+  const { setValorTransaccion, realizarRetiro, setBilletesStructure } =
+    userStore()
 
-  function valorClic(valor) {
-    const value = valor
-    switch (value) {
-      case '50000':
-        console.log('Dinero a retirar:', value)
-        DineroARetirar(Number(value))
-        realizarRetiro(Number(value))
-        setValorTransaccion(Number(value))
-        navigate('/successful')
-        break
-      case '100000':
-        console.log('Dinero a retirar:', value)
-        DineroARetirar(Number(value))
-        realizarRetiro(Number(value))
-        setValorTransaccion(Number(value))
-        navigate('/successful')
-        break
-      case '200000':
-        console.log('Dinero a retirar:', value)
-        DineroARetirar(Number(value))
-        realizarRetiro(Number(value))
-        setValorTransaccion(Number(value))
-        navigate('/successful')
-        break
+  async function valorClic(valor) {
+    const value = Number(valor)
+    const montoValido = await DineroARetirar(value)
+    setBilletesStructure(montoValido)
+    if (montoValido) {
+      console.log('Dinero a retirar:', value)
+      realizarRetiro(value)
+      setValorTransaccion(value)
+      navigate('/successful')
     }
   }
 

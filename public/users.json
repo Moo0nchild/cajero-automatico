@@ -26,7 +26,29 @@
     "numero": "16413806006",
     "clave": "2222" ,
     "saldo": 700000
+  },
+  {
+    "nombre": "Prueba Tarjeta",
+    "tipo": "ahorro",
+    "numero": "17616719534",
+    "clave": "2757" ,
+    "saldo": 4000000
+  },
+  {
+    "nombre": "Luis Vega",
+    "tipo": "ahorro",
+    "numero": "03174210412",
+    "clave": "5647" ,
+    "saldo": 4000000
+  },
+  {
+    "nombre": "Brayan Caro",
+    "tipo": "nequi",
+    "numero": "03245704999",
+    "clave": "" ,
+    "saldo": 2000000
   }
+
 ]
   
   
